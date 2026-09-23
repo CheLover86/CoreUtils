@@ -1,3 +1,8 @@
+Coreutils for your stuff! 
+
+#LIST OF COMMANDS/PROGRAMS:
+
+
 # ls-clone
 
 A lightweight, POSIX-compliant implementation of the classic `ls` system utility written from scratch in C. This project interacts directly with the Linux file system using low-level system calls to read directory streams and extract file metadata.
