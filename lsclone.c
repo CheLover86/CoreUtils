@@ -46,7 +46,7 @@ void print_long_format(const char *dir_path, const char *filename) {
 
 	print_permissions(file_stat.st_mode);
 
-	printf("%21ld ", (long)file_stat.st_nlink);
+	printf("%3ld ", (long)file_stat.st_nlink);
 
 	struct passwd *pw = getpwuid(file_stat.st_uid);
 	if (pw) printf("%s ", pw->pw_name);
@@ -56,7 +56,7 @@ void print_long_format(const char *dir_path, const char *filename) {
 	if (gr) printf("%s ", gr->gr_name);
 	else printf("%d ", file_stat.st_gid);
 
-	printf("%51ld ", (long)file_stat.st_size);
+	printf("%8ld ", (long)file_stat.st_size);
 
 	char time_buf[80];
 	struct tm *tm_info = localtime(&file_stat.st_mtime);
